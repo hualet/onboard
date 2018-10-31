@@ -3024,12 +3024,24 @@ class BCStealthMode(ButtonController):
         self.set_active(config.wp.stealth_mode)
 
 
+# TODO(hualet): don't use external commands
 class BCIMSwitch(ButtonController):
 
     id = "inputmethod"
 
+    def update_label(self):
+        output = run_command("qdbus org.fcitx.Fcitx /inputmethod org.fcitx.Fcitx.InputMethod.CurrentIM")
+        output_utf8 = output.decode("UTF-8")
+        if not output_utf8.find("fcitx-keyboard-us") == -1:
+            self.key.label = "EN"
+        elif not output_utf8.find("sogoupinyin") == -1:
+            self.key.label = "sogou"
+
     def release(self, view, button, event_type):
         run_command("qdbus org.fcitx.Fcitx /inputmethod org.fcitx.Fcitx.InputMethod.ToggleIM")
+
+    def update(self):
+        self.update_label()
 
 
 class BCFcitxKBD(ButtonController):

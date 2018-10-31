@@ -216,7 +216,7 @@ def run_script(script):
     a.run()
 
 def run_command(cmd):
-    subprocess.call(shlex.split(cmd))
+    return subprocess.check_output(shlex.split(cmd))
 
 def toprettyxml(domdoc):
     ugly_xml = domdoc.toprettyxml(indent='  ')
