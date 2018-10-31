@@ -12,6 +12,7 @@
     <key_template button="true" id="layer3" image="" label="Fn"/>
     <key_template button="true" id="layer4" image="snippets.svg" label=""/>
     <key_template button="true" id="layer5" label="☺"/>
+    <key_template button="true" id="inputmethod" label="IM"/>
     <box>
       <panel>
         <!-- layer0 -->
@@ -319,7 +320,7 @@
               <!-- layer1 -->
               <key group="bottomrow" id="hide"/>
               <key group="bottomrow" id="move"/>
-              <key group="bottomrow" id="LALT"/>
+              <key group="bottomrow" id="inputmethod" popup_id="im_popup" />
             </panel>
             <panel filename="Small-Numbers.svg" layer="numbers">
               <key group="bottomrow" id="layer4"/>
@@ -404,13 +405,15 @@
     </box>
   </box>
   <!-- popup definition -->
-  <!-- <layout filename="DeepinTouch-Alpha.svg" id="RTRN_popup">
+  <layout filename="DeepinTouch-Alpha.svg" id="im_popup">
+    <key_template button="true" id="sogoupinyin" label="sogou"/>
+    <key_template button="true" id="kbd" label="EN" />
     <box compact="true">
-      <key id="settings"/>
-      <key id="move"/>
-      <key id="showclick"/>
-      <key group="nowordlist" id="hide" image="close.svg" svg_id="hide.popup"/>
+      <key id="kbd"/>
+      <key id="sogoupinyin" />
+      <!-- <key id="showclick"/> -->
+      <!-- <key group="nowordlist" id="hide" image="close.svg" svg_id="hide.popup"/> -->
     </box>
-  </layout> -->
+  </layout>
 </keyboard>
 

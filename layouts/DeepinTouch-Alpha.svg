@@ -600,7 +600,7 @@ Copyright © 2011-2014, 2016, marmuta &lt;marmvta@gmail.com&gt;</dc:title>
        x="48.630001"
        width="22.739681"
        style="fill:#f2e5d8;stroke:#000000;stroke-width:1.25999987;stroke-miterlimit:4;stroke-dasharray:none"
-       id="LALT"
+       id="inputmethod"
        height="22.739677" />
     <rect
        id="middleclick"
@@ -729,13 +729,13 @@ Copyright © 2011-2014, 2016, marmuta &lt;marmvta@gmail.com&gt;</dc:title>
        y="24.629997"
        x="0.63"
        inkscape:label="" />
-    <!-- <rect
+    <rect
        x="328.63159"
        y="72.631195"
        width="22.73646"
        height="22.737225"
        style="fill:#e5d8b2;stroke:#000000;stroke-width:1.26315784"
-       id="settings"
+       id="kbd"
        inkscape:label="" />
     <rect
        x="352.6312"
@@ -743,9 +743,9 @@ Copyright © 2011-2014, 2016, marmuta &lt;marmvta@gmail.com&gt;</dc:title>
        width="22.73646"
        height="22.737225"
        style="fill:#e5d8b2;stroke:#000000;stroke-width:1.26315784"
-       id="move"
+       id="sogoupinyin"
        inkscape:label="" />
-    <rect
+    <!-- <rect
        x="400.6304"
        y="72.631195"
        width="22.73646"
