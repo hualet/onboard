@@ -60,7 +60,7 @@ from Onboard.canonical_equivalents import canonical_equivalents
 import Onboard.osk as osk
 
 try:
-    from Onboard.utils import run_script, get_keysym_from_name, dictproperty
+    from Onboard.utils import run_script, get_keysym_from_name, dictproperty, run_command
 except DeprecationWarning:
     pass
 
@@ -976,8 +976,9 @@ class Keyboard(WordSuggestions):
                   BCDoubleClick, BCDragClick, BCHoverClick,
                   BCHide, BCShowClick, BCMove, BCPreferences, BCQuit,
                   BCExpandCorrections, BCPreviousPredictions,
-                  BCNextPredictions, BCPauseLearning, BCLanguage,
+                  BCNextPredictions, BCPauseLearning, BCLanguage, BCIMSwitch,
                   BCStealthMode, BCAutoLearn, BCAutoPunctuation, BCInputline,
+                  BCFcitxKBD, BCFcitxSogouPinyin,
                   ]}
         for key in self.layout.iter_global_keys():
             if key.is_layer_button():
@@ -3022,3 +3023,26 @@ class BCStealthMode(ButtonController):
     def update(self):
         self.set_active(config.wp.stealth_mode)
 
+
+class BCIMSwitch(ButtonController):
+
+    id = "inputmethod"
+
+    def release(self, view, button, event_type):
+        run_command("qdbus org.fcitx.Fcitx /inputmethod org.fcitx.Fcitx.InputMethod.ToggleIM")
+
+
+class BCFcitxKBD(ButtonController):
+
+    id = "kbd"
+
+    def release(self, view, button, event_type):
+        run_command("qdbus org.fcitx.Fcitx /inputmethod org.fcitx.Fcitx.InputMethod.SetCurrentIM fcitx-keyboard-us")
+
+
+class BCFcitxSogouPinyin(ButtonController):
+
+    id = "sogoupinyin"
+
+    def release(self, view, button, event_type):
+        run_command("qdbus org.fcitx.Fcitx /inputmethod org.fcitx.Fcitx.InputMethod.SetCurrentIM sogoupinyin")

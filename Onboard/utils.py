@@ -26,6 +26,7 @@ import sys
 import os
 import time
 import re
+import shlex
 import colorsys
 import gettext
 import subprocess
@@ -213,6 +214,9 @@ def parse_modifier_strings(modifiers):
 def run_script(script):
     a =__import__(script)
     a.run()
+
+def run_command(cmd):
+    subprocess.call(shlex.split(cmd))
 
 def toprettyxml(domdoc):
     ugly_xml = domdoc.toprettyxml(indent='  ')
