@@ -3,7 +3,7 @@
   <include file="key_defs.xml"/>
   <box border="0.5" orientation="vertical" spacing="1.5">
     <!--- word suggestions -->
-    <panel filename="Small-Alpha.svg">
+    <panel filename="DeepinTouch-Alpha.svg">
       <include file="word_suggestions.xml"/>
     </panel>
     <key_template button="true" id="layer0" show_active="false"/>
@@ -17,7 +17,7 @@
         <!-- layer0 -->
 
         <!-- Cyrillic keymaps -->
-        <panel id="alpha-keys" filename="Small-Alpha.svg" layer="alpha" layout="ru,ua,by,bg,tj,ge(os),az(cyrillic),mn,mk">
+        <panel id="alpha-keys" filename="DeepinTouch-Alpha.svg" layer="alpha" layout="ru,ua,by,bg,tj,ge(os),az(cyrillic),mn,mk">
           <!-- row 4 -->
           <key group="bottomrow" id="ESC" label_margin=", 2"/>
           <key group="alphanumeric" id="AD01" svg_id="AD01-cyr"/>
@@ -69,7 +69,7 @@
         </panel>
 
         <!-- Latin and other keymaps -->
-        <panel id="alpha-keys" filename="Small-Alpha.svg" layer="alpha">
+        <panel id="alpha-keys" filename="DeepinTouch-Alpha.svg" layer="alpha">
           <!-- row 4 -->
           <key group="bottomrow" id="ESC" label_margin=", 2"/>
           <key group="alphanumeric" id="AD01"/>
@@ -315,10 +315,10 @@
         </panel>
         <panel>
           <panel>
-            <panel filename="Small-Alpha.svg" layer="alpha">
+            <panel filename="DeepinTouch-Alpha.svg" layer="alpha">
               <!-- layer1 -->
-              <key group="bottomrow" id="LCTL"/>
-              <key group="bottomrow" id="LWIN"/>
+              <key group="bottomrow" id="hide"/>
+              <key group="bottomrow" id="move"/>
               <key group="bottomrow" id="LALT"/>
             </panel>
             <panel filename="Small-Numbers.svg" layer="numbers">
@@ -347,11 +347,11 @@
               <key group="bottomrow" id="layer2"/>
             </panel>
           </panel>
-          <panel filename="Small-Alpha.svg">
+          <panel filename="DeepinTouch-Alpha.svg">
             <key group="bottomrow" id="layer1"/>
           </panel>
           <panel>
-            <panel filename="Small-Alpha.svg" layer="alpha">
+            <panel filename="DeepinTouch-Alpha.svg" layer="alpha">
               <key group="bottomrow" id="SPCE"/>
               <key group="alphanumeric" id="LEFT"/>
               <key group="alphanumeric" id="RGHT"/>
@@ -395,7 +395,7 @@
         </panel>
       </panel>
       <!-- Panel with the click buttons -->
-      <panel filename="Small-Alpha.svg" id="click">
+      <panel filename="DeepinTouch-Alpha.svg" id="click">
         <key group="click" id="middleclick"/>
         <key group="click" id="secondaryclick"/>
         <key group="click" id="doubleclick"/>
@@ -404,7 +404,7 @@
     </box>
   </box>
   <!-- popup definition -->
-  <!-- <layout filename="Small-Alpha.svg" id="RTRN_popup">
+  <!-- <layout filename="DeepinTouch-Alpha.svg" id="RTRN_popup">
     <box compact="true">
       <key id="settings"/>
       <key id="move"/>
